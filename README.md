@@ -1,1 +1,3 @@
-# schuy-theme
+# schemeR
+
+`remotes::install_github("schuyler-smith/schemR")`
