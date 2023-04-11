@@ -1,0 +1,17 @@
+Package: schemeR
+Type: Package
+Title: Schuyler Smith's ggplot2 theme
+Version: 1.0
+Date: 2023-04-11
+Author: Schuyler Smith
+Maintainer: Schuyler Smith <schuylers.emails@gmail.com>
+Description: Schuyler Smith's ggplot2 theme.
+NeedsCompilation: no
+License: GPL-3
+LazyData: true
+RoxygenNote: 7.2.3
+Encoding: UTF-8
+Depends:
+  R (>= 3.5)
+Imports:
+  ggplot2
