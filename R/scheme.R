@@ -26,7 +26,7 @@ schemeR <- function(
     base_rect_size = base_rect_size) %+replace%
     theme(
       panel.background   = element_rect(fill = "white", color = NA),
-      panel.border       = element_rect(color = "black", fill = NA, size = 1)),
+      panel.border       = element_rect(color = "black", fill = NA, size = 1),
       panel.grid         = element_line(color = "#F1F0F2"),
       panel.grid.minor.x = element_blank(),
       legend.title       = element_text(size = base_size * 1.2, face = "bold",
