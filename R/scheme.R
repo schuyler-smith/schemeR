@@ -82,6 +82,7 @@ schemeR <- function(
       theme(
         axis.ticks.y = element_blank(),
         panel.grid.minor.y = element_line(color = "#F1F0F2")
+        panel.grid.major.x = element_blank()
       )
   }
   if (grepl("line", graph_type)) {
