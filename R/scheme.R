@@ -26,9 +26,10 @@ schemeR <- function(
     base_rect_size = base_rect_size) %+replace%
     theme(
       panel.background   = element_rect(fill = "white", color = NA),
-      panel.border       = element_rect(color = "black", fill = NA, size = 1),
+      panel.border       = element_rect(color = "black", fill = NA, linewidth = 1),
       panel.grid         = element_line(color = "#F1F0F2"),
       panel.grid.minor.x = element_blank(),
+      panel.grid.minor.y = element_blank(),
       legend.title       = element_text(size = base_size * 1.2, face = "bold",
                                         hjust = 0),
       legend.text        = element_text(size = base_size),
@@ -73,8 +74,6 @@ schemeR <- function(
       theme(
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank()
       )
   }
@@ -82,25 +81,19 @@ schemeR <- function(
     schuy_theme <- schuy_theme %+replace%
       theme(
         axis.ticks.y = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
-        panel.grid.major.x = element_blank()
+        panel.grid.minor.y = element_line(color = "#F1F0F2")
       )
   }
   if (grepl("line", graph_type)) {
     schuy_theme <- schuy_theme %+replace%
       theme(
         axis.ticks.y = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank()
       )
   }
   if (grepl("heat", graph_type)) {
     schuy_theme <- schuy_theme %+replace%
       theme(
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank(),
         axis.ticks.y = element_blank(),
@@ -111,8 +104,6 @@ schemeR <- function(
     schuy_theme <- schuy_theme %+replace%
       theme(
         panel.border       = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank(),
         axis.ticks.x = element_blank(),
@@ -123,8 +114,6 @@ schemeR <- function(
     schuy_theme <- schuy_theme %+replace%
       theme(
         panel.border       = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank(),
         axis.ticks.x = element_blank(),
@@ -137,8 +126,6 @@ schemeR <- function(
     schuy_theme <- schuy_theme %+replace%
       theme(
         panel.border       = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank(),
         axis.ticks.x = element_blank(),
@@ -153,8 +140,6 @@ schemeR <- function(
     schuy_theme <- schuy_theme %+replace%
       theme(
         panel.border       = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank(),
         axis.ticks.y = element_blank(),
