@@ -81,7 +81,7 @@ schemeR <- function(
     schuy_theme <- schuy_theme %+replace%
       theme(
         axis.ticks.y = element_blank(),
-        panel.grid.minor.y = element_line(color = "#F1F0F2")
+        panel.grid.minor.y = element_line(color = "#F1F0F2"),
         panel.grid.major.x = element_blank()
       )
   }
