@@ -25,15 +25,15 @@ schemeR <- function(
     base_line_size = base_line_size,
     base_rect_size = base_rect_size) %+replace%
     theme(
-      panel.background   = element_rect(fill = "white", colour = NA),
-      panel.border       = element_blank(),
-      panel.grid         = element_line(colour = "#F1F0F2"),
+      panel.background   = element_rect(fill = "white", color = NA),
+      panel.border       = element_rect(color = "black", fill = NA, size = 1)),
+      panel.grid         = element_line(color = "#F1F0F2"),
       panel.grid.minor.x = element_blank(),
       legend.title       = element_text(size = base_size * 1.2, face = "bold",
                                         hjust = 0),
       legend.text        = element_text(size = base_size),
       legend.spacing.x   = unit(0.005, "npc"),
-      legend.key         = element_rect(fill = NA, colour = NA),
+      legend.key         = element_rect(fill = NA, color = NA),
       legend.key.size    = unit(4, "mm"),
       axis.ticks.y = element_blank(),
       axis.text.x        = element_text(size = base_size, angle = 0,
@@ -46,7 +46,7 @@ schemeR <- function(
                                         angle = 90),
       panel.spacing      = unit(.002, 'npc'),
       strip.text.x       = element_text(size = base_size * 0.9, face = "bold"),
-      strip.background   = element_rect(colour = "black", fill = "#DCDDDF",
+      strip.background   = element_rect(color = "black", fill = "#DCDDDF",
                                         linewidth = 1.4),
       complete           = TRUE
     )
@@ -110,6 +110,7 @@ schemeR <- function(
   if (grepl("ord|pc|rda|ca", graph_type)) {
     schuy_theme <- schuy_theme %+replace%
       theme(
+        panel.border       = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
@@ -121,6 +122,7 @@ schemeR <- function(
   if (grepl("nmds|tsne", graph_type)) {
     schuy_theme <- schuy_theme %+replace%
       theme(
+        panel.border       = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
@@ -134,6 +136,7 @@ schemeR <- function(
   if (grepl("graph|net", graph_type)) {
     schuy_theme <- schuy_theme %+replace%
       theme(
+        panel.border       = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
@@ -149,6 +152,7 @@ schemeR <- function(
   if (grepl("dend", graph_type)) {
     schuy_theme <- schuy_theme %+replace%
       theme(
+        panel.border       = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),
