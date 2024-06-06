@@ -39,7 +39,7 @@ schemeR <- function(
       axis.ticks.y = element_blank(),
       axis.text.x        = element_text(size = base_size, angle = 0,
                                         vjust = 0, hjust = 0.5),
-      axis.text.y        = element_text(size = base_size),
+      axis.text.y        = element_text(size = base_size, hjust = 1),
       axis.title.x       = element_text(size = base_size * 1.2, face = "bold",
                                         margin = margin(t = 10, r = 0, b = 0, l = 0)),
       axis.title.y       = element_text(size = base_size * 1.2, face = "bold",
