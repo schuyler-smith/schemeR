@@ -74,8 +74,9 @@ schemeR <- function(
       theme(
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank(),
-        panel.grid.major.x = element_blank()
-        panel.grid.minor.y = element_line(color = "#F1F0F2"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(color = "#000000"),
+        panel.grid.minor.y = element_line(color = "#808080"),
       )
   }
   if (grepl("box", graph_type)) {
