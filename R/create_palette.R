@@ -50,7 +50,7 @@ create_palette <- function(color_count, colors = 'default') {
   } else {
     if (color_count <= length(colors)) {
       return(colors[seq(color_count)])
-    else {
+    } else {
       getPalette <- colorRampPalette(colors)
     }
   }
