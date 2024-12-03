@@ -27,32 +27,34 @@ create_palette <- function(color_count, colors = 'default') {
   # image(1:length(mycolors), 1, as.matrix(1:length(mycolors)), 
   # col=mycolors, xlab="", ylab = "", xaxt = "n", yaxt = "n", bty = "n")
   if (any(colors == 'default')) {
+    # print("using defaults")
     colors <- mycolors
     if (color_count <= length(colors)) {
       return(colors[seq(color_count)])
     }
   }
   if (any(colors %in% 'rev') | any(colors %in% 'reverse')) {
+    # print("using reverse defaults")
     colors <- rev(mycolors)
     if (color_count <= length(mycolors)) {
       return(rev(mycolors[seq(color_count)]))
     }
   }
   if (any(!(colors %in% colors()))) {
+    # print("using non R colors")
     if (any(colors %in% rownames(RColorBrewer::brewer.pal.info))) {
       getPalette <- colorRampPalette(brewer.pal(min(c(
         color_count,
         brewer.pal.info[rownames(brewer.pal.info) == colors, 1]
       )), colors))
-    } else {
-      getPalette <- colorRampPalette(colors)
     }
-  } else {
     if (color_count <= length(colors)) {
       return(colors[seq(color_count)])
     } else {
       getPalette <- colorRampPalette(colors)
     }
+  } else {
+    getPalette <- colorRampPalette(colors)
   }
   return(getPalette(color_count))
 }
